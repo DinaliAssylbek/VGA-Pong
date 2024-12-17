@@ -1,6 +1,8 @@
 # VGA Pong Project
 This project is part of a larger Pong game implemented in Verilog for the CS 3710 class at the University of Utah. The project utilizes VGA communication to display the game on a screen. It operates on a 25 Hz clock and includes animations for the ball and paddles, with multiple game states and a custom-built font for the display.
 
+![Untitled design](https://github.com/user-attachments/assets/e694cf7e-0189-44be-a5f6-13cd192082ba)
+
 ## Overview
 The design consists of several Verilog modules that communicate with each other to display the Pong game on a VGA screen. The system uses a 25 Hz clock and supports three main game states:
 
