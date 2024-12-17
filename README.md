@@ -12,27 +12,18 @@ The display is controlled via the VGA interface, and the game data (such as ball
 
 ## File Descriptions:
 #### 1. VGAAddressGen.v
-###### Description: 
-This module generates the addresses for accessing the video memory (VGA frame buffer). It calculates the address to be read based on the current pixel location on the screen.
-Function: Ensures that the VGA controller can correctly access the correct memory locations to display the images and text on the screen.
+Description: This module generates the index for accessing the glyph. It calculates the address to be read based on the current pixel location on the screen.
 #### 2. VGABallAnimationCalculator.v
-Description: This module is responsible for calculating the animation of the ball during the game.
-Function: It controls the ball's movement, including speed, direction, and interactions with the paddles and walls.
+Description: This module is responsible for calculating the animation of the ball during the introduction screen of the game.
 #### 3. VGABitGen.v
 Description: This module generates the bit patterns required for displaying characters or images on the VGA screen.
-Function: It works with the glyph ROM to convert the data into the proper bit representation for the VGA display.
 #### 4. VGAControl.v
-Description: This module acts as the central control unit for the VGA display, coordinating the flow of data to the VGA output based on the current game state.
-Function: It manages the different game states (Introduction, Game, Game Over) and triggers the appropriate actions to update the display.
+Description: This module acts as the central control unit for the VGA display, calculating the horizontal and vertical pixel placements as well as the horizontal and vertical synchronizations.
 #### 5. VGAGlyphRom.v
 Description: This module contains a ROM (Read-Only Memory) with 24 predefined glyphs used by the game.
-Function: The glyphs are used to display scores, text, and other graphical elements on the screen. The ROM is specifically designed for this Pong game and will need to be modified for use in other applications.
 #### 6. VGAScoreDecoder.v
 Description: This module decodes the score data and sends it to the display.
-Function: Converts the numerical score into the corresponding glyph to be displayed on the screen, helping to visualize the player's score.
 #### 7. VGATop.v
 Description: This is the top-level module that instantiates and connects all the other modules in the project.
-Function: Coordinates the overall system, connecting the VGA controller, BRAM, and other submodules. It serves as the main control unit for the Pong game.
 #### 8. VGAfsm.v
-Description: This module contains the finite state machine (FSM) that controls the transitions between the different game states.
-Function: It determines when the game should move between the Introduction, Game, and Game Over screens based on user inputs or game events.
+Description: This module contains the finite state machine (FSM) that controls the signals sent to memory to continously retrieve game information such as scores, paddle positions, and ball position from memory. 
