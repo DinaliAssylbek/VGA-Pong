@@ -12,18 +12,22 @@ The display is controlled via the VGA interface, and the game data (such as ball
 
 ## File Descriptions:
 #### 1. VGAAddressGen.v
-Description: This module generates the index for accessing the glyph. It calculates the address to be read based on the current pixel location on the screen.
+This module generates the index for accessing the glyph. It calculates the address to be read based on the current pixel location on the screen.
 #### 2. VGABallAnimationCalculator.v
-Description: This module is responsible for calculating the animation of the ball during the introduction screen of the game.
+This module is responsible for calculating the animation of the ball during the introduction screen of the game.
 #### 3. VGABitGen.v
-Description: This module generates the bit patterns required for displaying characters or images on the VGA screen.
+This module generates the bit patterns required for displaying characters or images on the VGA screen.
 #### 4. VGAControl.v
-Description: This module acts as the central control unit for the VGA display, calculating the horizontal and vertical pixel placements as well as the horizontal and vertical synchronizations.
+This module acts as the central control unit for the VGA display, calculating the horizontal and vertical pixel placements as well as the horizontal and vertical synchronizations.
 #### 5. VGAGlyphRom.v
-Description: This module contains a ROM (Read-Only Memory) with 24 predefined glyphs used by the game.
+This module contains a ROM (Read-Only Memory) with 24 predefined glyphs used by the game.
 #### 6. VGAScoreDecoder.v
-Description: This module decodes the score data and sends it to the display.
+This module decodes the score data and sends it to the display.
 #### 7. VGATop.v
-Description: This is the top-level module that instantiates and connects all the other modules in the project.
+This is the top-level module that instantiates and connects all the other modules in the project.
 #### 8. VGAfsm.v
-Description: This module contains the finite state machine (FSM) that controls the signals sent to memory to continously retrieve game information such as scores, paddle positions, and ball position from memory. 
+This module contains the finite state machine (FSM) that controls the signals sent to memory to continously retrieve game information such as scores, paddle positions, and ball position from memory. 
+
+## VGA Block Diagram
+![image](https://github.com/user-attachments/assets/ee1c0ca3-8ce3-4f0d-94bd-7e20f02781b2)
+
